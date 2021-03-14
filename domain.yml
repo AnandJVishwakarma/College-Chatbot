@@ -1,0 +1,242 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- chairman_msg
+- principal_msg
+- director_msg
+- VNM
+- bot_challenge
+- addmission_process
+- location_college
+- eligibility_criteria
+- overall_courses
+- ug_courses
+- pg_courses
+- hsc_courses
+- phd_courses
+- certificate_courses
+- contact_details
+- college_info
+- college_campus
+- library_info
+- college_placement
+- events_organised
+- college_ground
+- out_of_scope
+- faculty_info
+- commerce_stream
+- science_stream
+- arts_stream
+- vp_info
+- task
+- mood_great
+entities:
+- add_process
+- ug_course
+- pg_course
+- hsc_course
+- phd_course
+- cert
+- location
+- contact
+- eligible
+- info
+- surrond
+- gnd
+- clgpm
+- stream
+- vp
+- eve
+- lib
+- faculty
+- ovc
+slots:
+  address:
+    type: unfeaturized
+  cert:
+    type: unfeaturized
+  clgpm:
+    type: unfeaturized
+  eligible:
+    type: text
+  eve:
+    type: unfeaturized
+  gnd:
+    type: unfeaturized
+  hsc_course:
+    type: unfeaturized
+  info:
+    type: text
+  lib:
+    type: unfeaturized
+  location:
+    type: unfeaturized
+  ovc:
+    type: unfeaturized
+  pg_course:
+    type: unfeaturized
+  phd_course:
+    type: unfeaturized
+  surrond:
+    type: unfeaturized
+  ug_course:
+    type: unfeaturized
+  vp:
+    type: text
+  stream:
+    type: unfeaturized  
+responses:
+  utter_iamabot:
+  - text: I am BKBirla Bot!!
+  - text: You can call me BKBirla Bot!!
+  utter_salutaion:
+  - text: I am glad I helped you 😃!
+  utter_goodbye:
+  - text: Always there for your help✌️!!
+  utter_task:
+  - text: I can answer to low-intermediate questions regarding college.
+  - text: You can ask me questions regarding college,and i will try to answer them.
+  utter_location:
+  - text: B.k.Birla College Road nearby shivsena office ,Kalyan West. Here is the
+      📍[map](https://goo.gl/maps/V41wA5SX9QftpVxs9)
+  utter_how_can_i_help:
+  - buttons:
+    - payload: /college_info
+      title: About Us
+    - payload: /contact_details
+      title: Contact Us
+    - payload: /location_college
+      title: Location
+    text: Hello!!
+  utter_give_info:
+  - buttons:
+    - payload: /chairman_msg
+      title: Chairman message
+    - payload: /director_msg
+      title: Director message
+    - payload: /principal_msg
+      title: Principal message
+    - payload: /VNM
+      title: Vision & Mission
+    text: "The College was established in 1972, by Kalyan Citizens’ Education Society
+      with the blessings of Late Shri B. K. Birla ji and Late Smt. Sarala ji Birla. \n To read more about college refer this link https://www.bkbirlacollegekalyan.com/ourcollege.aspx"
+  utter_placement_info:
+  - text: "Here is the placement info link" 
+    custom:
+      payload: link_attachment
+      data:
+      - url: https://www.bkbirlacollegekalyan.com/placementcell.aspx
+
+
+   
+  utter_ground_info:
+  - image: https://i.imgur.com/y9ZeUgr.png
+    text: Yes!!B.K.Birla College as a Huge Ground to play different sports⚽🏸🏏!!
+  utter_events_info:
+  - text: Pravah , Rose show , Paryavarnum , Egnite , Republic day , Independence
+      day events and many more events are organized by different departments every
+      year!
+  utter_library_info:
+  - text: College has a separate building for library and timing is 8am to 6pm. Our
+      Best Practices in library:- Group Book Bank Scheme , Regular Infrastructure
+      and collection development , Personalized User Services , Departmental Libraries
+      , In-house computer & information literacy programme , Continuing education
+      and career advancement for staff , Automated Functioning & Services Extension
+      Activities
+  utter_give_campus:
+  - image: https://i.imgur.com/Nci22sm.jpg
+    text: The College is spread over 20 acres of land (including B. K. Birla Public
+      School) in the prime location of Kalyan city. It also promotes sustainable practices
+      in its lush green, serene and as an eco friendly campus
+  utter_cm:
+  - text: https://www.bkbirlacollegekalyan.com/chairmansmessage.aspx
+  utter_dm:
+  - text: https://www.bkbirlacollegekalyan.com/principalsmessage.aspx
+  utter_pm:
+  - text: https://www.bkbirlacollegekalyan.com/PrincipleMessage.aspx
+  utter_vm:
+  - text: https://www.bkbirlacollegekalyan.com/vision.aspx
+  utter_ask_stream:
+  - text: Please enter the stream name as there are different Vice principal for each
+      stream!
+    buttons:
+    - title: "Arts"
+      payload: "/arts_stream"
+    - title: "Science"
+      payload: "/science_stream"
+    - title: "Commerce"
+      payload: "/commerce_stream"    
+
+  utter_ask_course:
+  - buttons:
+    - payload: /hsc_courses
+      title: "H.S.C & \n H.S.C Vocational"
+    - payload: /ug_courses
+      title: UG (Aided & Unaided)
+    - payload: /pg_courses
+      title: PG (Aided & Unaided)
+    - payload: /certificate_courses
+      title: Certificate Courses
+    - payload: /phd_courses
+      title: Ph.D
+    text: "Following courses are provided by the college  \n  Click to know the details."
+  utter_hsc_course:
+  - text: https://www.bkbirlacollegekalyan.com/juniorcollege.aspx
+  utter_UG_course:
+  - text: https://www.bkbirlacollegekalyan.com/degreecollege.aspx
+  utter_PG_course:
+  - text: https://www.bkbirlacollegekalyan.com/pg.aspx
+  utter_phd_course:
+  - text: https://www.bkbirlacollegekalyan.com/phd.aspx
+  utter_certificate_course:
+  - text: Here is the details for the certificate Courses
+    custom:
+      payload: pdf_attachment
+      data:
+      - title: Details of Certificate Courses
+        url: /home/linux-unversei/Documents/coll_bot-test/CertiCourses-Combined.pdf
+
+  utter_artsvp:
+  - text: "Dr. Swapna Samel is the Senior Vice Principal from ARTS stream."
+  utter_scivp:
+  - text: "Dr. Maninder Dhaliwal(Microbiology dept.) &  \n Ms. Esmita Gupta(Info. Tech dept.) for all unaided courses are the Vice Principal from SCIENCE stream."
+  utter_commvp:
+  - text: "Dr. Swapna Samel is the Senior Vice Principal from ARTS stream."      
+      
+    
+actions:
+- utter_cm
+- utter_vm
+- utter_pm
+- utter_dm
+- utter_goodbye
+- utter_task
+- utter_iamabot
+- utter_how_can_i_help
+- utter_location
+- utter_ask_stream
+- utter_give_info
+- utter_give_campus
+- action_give_contact
+- utter_placement_info
+- utter_library_info
+- utter_ground_info
+- utter_events_info
+- utter_ask_course
+- utter_salutaion
+- utter_UG_course
+- utter_PG_course
+- utter_hsc_course
+- utter_phd_course
+- utter_certificate_course
+- action_eligibility_tracker
+- utter_commvp
+- utter_artsvp
+- utter_scivp
+- action_vip_info
+- action_greet_user

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask Template Example</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "static/css/style.css">
+    <link rel= "stylesheet" type= "text/css" href= "static/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav style="background: linear-gradient(rgb(47,150,163),rgb(48,62,143));font-size: 30px;font-weight: bold;text-align: center;">
+        B. K. Birla College of Arts, Science & Commerce (Autonomous), Kalyan 
+        </nav>
+        
+
+    {% block content %}
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script type="text/javascript" src="static/js/script.js"></script>
+</body>
+
+</html>
